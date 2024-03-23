@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad399f06-3e93-49c8-a713-b01bf3990573" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DatasetUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatasetUnitTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2duMBmyGwf5VOc5xGkBuAXXq1Ug" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,11 +41,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.DatasetUnitTests.DatasetUnitTest10.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest11.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest12.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest13.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest14.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest15.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest16.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest17.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest18.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest6.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest7.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest8.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest9.executor": "Run",
+    "JUnit.DatasetUnitTests.executor": "Coverage",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/User/4th Year Projects/Software III/Individual Project - Software III/TestingHumanEval-x/src/test/java/SolutionTest.java"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/4th Year Projects/Software III/Individual Project - Software III/TestingHumanEval-x/src/test/java/SolutionTest.java",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -55,52 +72,51 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatasetUnitTests.DatasetUnitTest5">
-    <configuration name="DatasetUnitTests.DatasetUnitTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DatasetUnitTests">
+    <configuration name="DatasetUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatasetUnitTests.DatasetUnitTest16" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AndrewBritzProjectCode" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
+      <option name="METHOD_NAME" value="DatasetUnitTest16" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatasetUnitTests.DatasetUnitTest17" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest2" />
+      <option name="METHOD_NAME" value="DatasetUnitTest17" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatasetUnitTests.DatasetUnitTest18" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest3" />
+      <option name="METHOD_NAME" value="DatasetUnitTest18" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatasetUnitTests.DatasetUnitTest20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AndrewBritzProjectCode" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest5" />
+      <option name="METHOD_NAME" value="DatasetUnitTest20" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,13 +124,20 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest5" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest4" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest3" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest2" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest1" />
+        <item itemvalue="JUnit.DatasetUnitTests" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest20" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest18" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest17" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest16" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-15.0.2-corretto-15.0.2-4caba194b151-9bc2d75a" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -137,5 +160,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests.ic" NAME="DatasetUnitTests Coverage Results" MODIFIED="1711219360168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
