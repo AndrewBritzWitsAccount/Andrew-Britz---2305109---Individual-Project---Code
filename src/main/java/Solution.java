@@ -1,5 +1,6 @@
 import java.util.*;
 import java.lang.*;
+import java.util.stream.Collectors;
 
 public class Solution
 {
@@ -442,6 +443,175 @@ public class Solution
 
     //=================================================================================================
     // Test 21
+    //=================================================================================================
+    /**
+     * Given list of numbers (of at least two elements), apply a linear transform to that list,
+     * such that the smallest number will become 0 and the largest will become 1
+     * >>> rescaleToUnit(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0))
+     * [0.0, 0.25, 0.5, 0.75, 1.0]
+     */
+    public List<Double> rescaleToUnit(List<Double> numbers) {
+        double min_number = Collections.min(numbers);
+        double max_number = Collections.max(numbers);
+        List<Double> result = new ArrayList<>();
+        for (double x : numbers) {
+            result.add((x - min_number) / (max_number - min_number));
+        }
+        return result;
+    }
+
+    //=================================================================================================
+    // Test 22
+    //=================================================================================================
+    /**
+     * Filter given list of any values only for integers
+     * >>> filter_integers(Arrays.asList('a', 3.14, 5))
+     * [5]
+     * >>> filter_integers(Arrays.asList(1, 2, 3, "abc", Map.of(), List.of()))
+     * [1, 2, 3]
+     */
+    public List<Integer> filterIntergers(List<Object> values) {
+        List<Integer> result = new ArrayList<>();
+        for (Object x : values) {
+            if (x instanceof Integer) { result.add((Integer) x); }
+        }
+        return result;
+    }
+
+    //=================================================================================================
+    // Test 23
+    //=================================================================================================
+    /**
+     * Return length of given string
+     * >>> strlen("")
+     * 0
+     * >>> strlen("abc")
+     * 3
+     */
+    public int strlen(String string) {
+        return string.length();
+    }
+
+    //=================================================================================================
+    // Test 24
+    //=================================================================================================
+    /**
+     * For a given number n, find the largest number that divides n evenly, smaller than n
+     * >>> largestDivisor(15)
+     * 5
+     */
+    public int largestDivisor(int n) {
+        for (int i = n - 1; i > 0; i--) {
+            if (n % i == 0) { return i; }
+        }
+        return 1;
+    }
+
+    //=================================================================================================
+    // Test 25
+    //=================================================================================================
+    /**
+     * Return list of prime factors of given integer in the order from smallest to largest.
+     * Each of the factors should be listed number of times corresponding to how many times it appears in factorization.
+     * Input number should be equal to the product of all factors
+     * >>> factorize(8)
+     * [2, 2, 2]
+     * >>> factorize(25)
+     * [5, 5]
+     * >>> factorize(70)
+     * [2, 5, 7]
+     */
+    public List<Integer> factorize(int n) {
+        List<Integer> fact = new ArrayList<>();
+        int i = 2;
+        while (n > 1) {
+            if (n % i == 0) {
+                fact.add(i);
+                n /= i;
+            } else {
+                i++;
+            }
+        }
+        return fact;
+    }
+
+    //=================================================================================================
+    // Test 26
+    //=================================================================================================
+    /**
+     * From a list of integers, remove all elements that occur more than once.
+     * Keep the order of elements left the same as in the input.
+     * >>> removeDuplicates(Arrays.asList(1, 2, 3, 2, 4))
+     * [1, 3, 4]
+     */
+    public List<Integer> removeDuplicates(List<Integer> numbers) {
+        Map<Integer, Integer> c = new HashMap<>();
+        for (int i : numbers) { c.put(i, c.getOrDefault(i, 0) + 1); }
+        return numbers.stream().filter(i -> c.get(i) == 1).collect(Collectors.toList());
+    }
+
+    //=================================================================================================
+    // Test 27
+    //=================================================================================================
+    /**
+     * For a given string, flip lowercase characters to uppercase and uppercase to lowercase.
+     * >>> flipCase("Hello")
+     * "hELLO"
+     */
+    public String flipCase(String string) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < string.length(); i++)
+        {
+            if (Character.isLowerCase(string.charAt(i))) { sb.append(Character.toUpperCase(string.charAt(i))); }
+            else { sb.append(Character.toLowerCase(string.charAt(i))); }
+        }
+        return sb.toString();
+    }
+
+    //=================================================================================================
+    // Test 28
+    //=================================================================================================
+    /**
+     * Concatenate list of strings into a single string
+     * >>> concatenate(List.of())
+     * ""
+     * >>> concatenate(Arrays.asList("a", "b", "c"))
+     * "abc"
+     */
+    public String concatenate(List<String> strings) {
+        return String.join("", strings);
+    }
+
+    //=================================================================================================
+    // Test 29
+    //=================================================================================================
+    /**
+     * Filter an input list of strings only for ones that start with a given prefix.
+     * >>> filterByPrefix(List.of(), "a")
+     * []
+     * >>> filterByPrefix(Arrays.asList("abc", "bcd", "cde", "array"), "a")
+     * ["abc", "array"]
+     */
+    public List<String> filterByPrefix(List<String> strings, String prefix) {
+        return strings.stream().filter(p -> p.startsWith(prefix)).collect(Collectors.toList());
+    }
+
+    //=================================================================================================
+    // Test 30
+    //=================================================================================================
+    /**
+     * Return only positive numbers in the list.
+     * >>> getPositive(Arrays.asList(-1, 2, -4, 5, 6))
+     * [2, 5, 6]
+     * >>> getPositive(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))
+     * [5, 3, 2, 3, 9, 123, 1]
+     */
+    public List<Integer> getPositive(List<Integer> l) {
+        return l.stream().filter(p -> p > 0).collect(Collectors.toList());
+    }
+
+    //=================================================================================================
+    // Test 31
     //=================================================================================================
 
 }

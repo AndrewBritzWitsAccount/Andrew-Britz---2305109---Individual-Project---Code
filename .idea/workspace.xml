@@ -50,11 +50,19 @@
     "JUnit.DatasetUnitTests.DatasetUnitTest16.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest17.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest18.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest20.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest21.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest22.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest23.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest24.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest25.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest26.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest27.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest6.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest7.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest8.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest9.executor": "Run",
-    "JUnit.DatasetUnitTests.executor": "Coverage",
+    "JUnit.DatasetUnitTests.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -72,51 +80,52 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatasetUnitTests">
-    <configuration name="DatasetUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DatasetUnitTests.DatasetUnitTest30">
+    <configuration name="DatasetUnitTests.DatasetUnitTest26" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest16" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AndrewBritzProjectCode" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest16" />
+      <option name="METHOD_NAME" value="DatasetUnitTest26" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest17" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatasetUnitTests.DatasetUnitTest27" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest17" />
+      <option name="METHOD_NAME" value="DatasetUnitTest27" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest18" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatasetUnitTests.DatasetUnitTest28" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest18" />
+      <option name="METHOD_NAME" value="DatasetUnitTest28" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DatasetUnitTests.DatasetUnitTest29" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest20" />
+      <option name="METHOD_NAME" value="DatasetUnitTest29" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatasetUnitTests.DatasetUnitTest30" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AndrewBritzProjectCode" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
+      <option name="METHOD_NAME" value="DatasetUnitTest30" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DatasetUnitTests" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest20" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest18" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest17" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest16" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest30" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest29" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest28" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest27" />
+        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest26" />
       </list>
     </recent_temporary>
   </component>

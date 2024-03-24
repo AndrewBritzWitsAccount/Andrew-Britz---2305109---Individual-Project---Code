@@ -1,9 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+
+import java.util.*;
 
 class DatasetUnitTests {
     //==================================================================================================
@@ -399,4 +397,176 @@ class DatasetUnitTests {
             throw new AssertionError();
         }
     }
+
+    //=================================================================================================
+    // Test 21
+    //=================================================================================================
+    /**
+     * Given list of numbers (of at least two elements), apply a linear transform to that list,
+     * such that the smallest number will become 0 and the largest will become 1
+     * >>> rescaleToUnit(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0))
+     * [0.0, 0.25, 0.5, 0.75, 1.0]
+     */
+    @Test
+    void DatasetUnitTest21() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.rescaleToUnit(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0))).equals(Arrays.asList(0.0, 0.25, 0.5, 0.75, 1.0)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 22
+    //=================================================================================================
+    /**
+     * Filter given list of any values only for integers
+     * >>> filter_integers(Arrays.asList('a', 3.14, 5))
+     * [5]
+     * >>> filter_integers(Arrays.asList(1, 2, 3, "abc", Map.of(), List.of()))
+     * [1, 2, 3]
+     */
+    @Test
+    void DatasetUnitTest22() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.filterIntergers(new ArrayList<>(Arrays.asList('a', 3.14, 5))).equals(Arrays.asList(5)), s.filterIntergers(new ArrayList<>(Arrays.asList(1,2,3,"abc", Map.of(), List.of()))).equals(Arrays.asList(1,2,3)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 23
+    //=================================================================================================
+    /**
+     * Return length of given string
+     * >>> strlen("")
+     * 0
+     * >>> strlen("abc")
+     * 3
+     */
+    @Test
+    void DatasetUnitTest23() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.strlen("") == 0, s.strlen("abc") == 3 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 24
+    //=================================================================================================
+    /**
+     * For a given number n, find the largest number that divides n evenly, smaller than n
+     * >>> largestDivisor(15)
+     * 5
+     */
+    @Test
+    void DatasetUnitTest24() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.largestDivisor(15) == 5 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 25
+    //=================================================================================================
+    /**
+     * Return list of prime factors of given integer in the order from smallest to largest.
+     * Each of the factors should be listed number of times corresponding to how many times it appears in factorization.
+     * Input number should be equal to the product of all factors
+     * >>> factorize(8)
+     * [2, 2, 2]
+     * >>> factorize(25)
+     * [5, 5]
+     * >>> factorize(70)
+     * [2, 5, 7]
+     */
+    @Test
+    void DatasetUnitTest25() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.factorize(8).equals(Arrays.asList(2, 2, 2)), s.factorize(25).equals(Arrays.asList(5,5)), s.factorize(70).equals(Arrays.asList(2,5,7)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 26
+    //=================================================================================================
+    /**
+     * From a list of integers, remove all elements that occur more than once.
+     * Keep the order of elements left the same as in the input.
+     * >>> removeDuplicates(Arrays.asList(1, 2, 3, 2, 4))
+     * [1, 3, 4]
+     */
+    @Test
+    void DatasetUnitTest26() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.removeDuplicates(new ArrayList<>(Arrays.asList(1, 2, 3, 2,4))).equals(Arrays.asList(1, 3, 4)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 27
+    //=================================================================================================
+    /**
+     * For a given string, flip lowercase characters to uppercase and uppercase to lowercase.
+     * >>> flipCase("Hello")
+     * "hELLO"
+     */
+    @Test
+    void DatasetUnitTest27() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( Objects.equals(s.flipCase(""), ""), Objects.equals(s.flipCase("Hello"), "hELLO") );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 28
+    //=================================================================================================
+    /**
+     * Concatenate list of strings into a single string
+     * >>> concatenate(List.of())
+     * ""
+     * >>> concatenate(Arrays.asList("a", "b", "c"))
+     * "abc"
+     */
+    @Test
+    void DatasetUnitTest28() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( Objects.equals(s.concatenate(new ArrayList<>(List.of())), ""), Objects.equals(s.concatenate(new ArrayList<>(Arrays.asList("a", "b", "c"))),"abc") );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 29
+    //=================================================================================================
+    /**
+     * Filter an input list of strings only for ones that start with a given prefix.
+     * >>> filterByPrefix(List.of(), "a")
+     * []
+     * >>> filterByPrefix(Arrays.asList("abc", "bcd", "cde", "array"), "a")
+     * ["abc", "array"]
+     */
+    @Test
+    void DatasetUnitTest29() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.filterByPrefix(new ArrayList<>(List.of()), "a").equals(List.of()), s.filterByPrefix(new ArrayList<>(Arrays.asList("abc", "bcd", "cde", "array")), "a").equals(Arrays.asList("abc", "array")) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 30
+    //=================================================================================================
+    /**
+     * Return only positive numbers in the list.
+     * >>> getPositive(Arrays.asList(-1, 2, -4, 5, 6))
+     * [2, 5, 6]
+     * >>> getPositive(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))
+     * [5, 3, 2, 3, 9, 123, 1]
+     */
+    @Test
+    void DatasetUnitTest30() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.getPositive(new ArrayList<>(Arrays.asList(-1, 2, -4, 5, 6))).equals(Arrays.asList(2, 5, 6)), s.getPositive(new ArrayList<>(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))).equals(Arrays.asList(5, 3, 2, 3, 9, 123, 1)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+
+
+
 }
