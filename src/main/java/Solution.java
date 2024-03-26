@@ -613,6 +613,479 @@ public class Solution
     //=================================================================================================
     // Test 31
     //=================================================================================================
+    /**
+     * Return true if a given number is prime, and false otherwise.
+     *
+     * Examples:
+     * >>> isPrime(6) false
+     * >>> isPrime(101) true
+     * >>> isPrime(11) true
+     * >>> isPrime(13441) true
+     * >>> isPrime(61) true
+     * >>> isPrime(4) false
+     * >>> isPrime(1) false
+     */
+    public boolean isPrime(int n) {
+        if (n < 2) { return false; }
+        for (int k = 2; k < n; k++) {
+            if (n % k == 0) { return false;}
+        }
+        return true;
+    }
+
+    //=================================================================================================
+    // Test 32
+    //=================================================================================================
+    /**
+     * Evaluates polynomial with coefficients xs at point x.
+     *
+     * Formula:
+     * xs[0] + xs[1] * x + xs[2] * x^2 + ... + xs[n] * x^n
+     */
+    public double poly(List<Double> xs, double x) {
+        double result = 0;
+        for (int i = 0; i < xs.size(); i++) {
+            result += xs.get(i) * Math.pow(x, i);
+        }
+        return result;
+    }
+    public double findZero(List<Double> xs) {
+        double begin = -1, end = 1;
+        while (poly(xs, begin) * poly(xs, end) > 0) {
+            begin *= 2; end *= 2;
+        }
+        while (end - begin > 1e-10) {
+            double center = (begin + end) / 2;
+            if (poly(xs, begin) * poly(xs, center) > 0) { begin = center; }
+            else { end = center; }
+        }
+        return begin;
+    }
+
+    //=================================================================================================
+    // Test 33
+    //=================================================================================================
+    /**
+     * This function takes a list l and returns a list l' such that:
+     * - l' is identical to l in the indices that are not divisible by three,
+     * - its values at the indices that are divisible by three are equal to the values of the corresponding indices of l, but sorted.
+     *
+     * Example:
+     * >>> sortThird(Arrays.asList(1, 2, 3))
+     * [1, 2, 3]
+     * >>> sortThird(Arrays.asList(5, 6, 3, 4, 8, 9, 2))
+     * [2, 6, 3, 4, 8, 9, 5]
+     */
+    public List<Integer> sortThird(List<Integer> l) {
+        List<Integer> thirds = new ArrayList<>();
+        for (int i = 0; i < l.size(); i += 3) { thirds.add(l.get(i)); }
+        Collections.sort(thirds);
+        List<Integer> result = l;
+        for (int i = 0; i < l.size(); i += 3) { result.set(i, thirds.get(i / 3)); }
+        return result;
+    }
+
+    //=================================================================================================
+    // Test 34
+    //=================================================================================================
+    /**
+     * Return sorted unique elements in a list.
+     *
+     * Example:
+     * >>> unique(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))
+     * [0, 2, 3, 5, 9, 123]
+     */
+    public List<Integer> unique(List<Integer> l) {
+        List<Integer> result = new ArrayList<>(new HashSet<>(l));
+        Collections.sort(result);
+        return result;
+    }
+
+    //=================================================================================================
+    // Test 35
+    //=================================================================================================
+    /**
+     * Return maximum element in the list.
+     *
+     * Example:
+     * >>> maxElement(Arrays.asList(1, 2, 3))
+     * 3
+     * >>> maxElement(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))
+     * 123
+     */
+    public int maxElement(List<Integer> l) {
+        return Collections.max(l);
+    }
+
+    //=================================================================================================
+    // Test 36
+    //=================================================================================================
+    /**
+     * Return the number of times the digit 7 appears in integers less than n
+     * which are divisible by 11 or 13.
+     *
+     * Example:
+     * >>> fizzBuzz(50)
+     * 0
+     * >>> fizzBuzz(78)
+     * 2
+     * >>> fizzBuzz(79)
+     * 3
+     */
+    public int fizzBuzz(int n) {
+        int result = 0;
+        for (int i = 1; i < n; i++) {
+            if (i % 11 == 0 || i % 13 == 0) {
+                char[] digits = String.valueOf(i).toCharArray();
+                for (char c : digits) {
+                    if (c == '7') { result += 1; }
+                }
+            }
+        }
+        return result;
+    }
+
+    //=================================================================================================
+    // Test 37
+    //=================================================================================================
+    /**
+     * This function takes a list l and returns a list l' such that:
+     * - l' is identical to l in the odd indices,
+     * - its values at the even indices are equal to the values of the even indices of l, but sorted.
+     *
+     * Example:
+     * >>> sortEven(Arrays.asList(1, 2, 3))
+     * [1, 2, 3]
+     * >>> sortEven(Arrays.asList(5, 6, 3, 4))
+     * [3, 6, 5, 4]
+     */
+    public List<Integer> sortEven(List<Integer> l) {
+        List<Integer> even = new ArrayList<>();
+        for (int i = 0; i < l.size(); i += 2) { even.add(l.get(i)); }
+        Collections.sort(even);
+        List<Integer> result = l;
+        for (int i = 0; i < l.size(); i += 2) { result.set(i, even.get(i / 2)); }
+        return result;
+    }
+
+    //=================================================================================================
+    // Test 38
+    //=================================================================================================
+    /**
+     * primeFib returns the n-th number that is both a Fibonacci number and prime.
+     *
+     * Examples:
+     * >>> primeFib(1)
+     * 2
+     * >>> primeFib(2)
+     * 3
+     * >>> primeFib(3)
+     * 5
+     * >>> primeFib(4)
+     * 13
+     * >>> primeFib(5)
+     * 89
+     */
+    public int primeFib(int n) {
+        int f0 = 0, f1 = 1;
+        while (true) {
+            int p = f0 + f1;
+            boolean is_prime = p >= 2;
+            for (int k = 2; k < Math.min(Math.sqrt(p) + 1, p - 1); k++) {
+                if (p % k == 0) {
+                    is_prime = false;
+                    break;
+                }
+            }
+            if (is_prime) {
+                n -= 1;
+            }
+            if (n == 0) {
+                return p;
+            }
+            f0 = f1;
+            f1 = p;
+        }
+    }
+
+    //=================================================================================================
+    // Test 39
+    //=================================================================================================
+    /**
+     * triplesSumToZero takes a list of integers as an input.
+     * It returns True if there are three distinct elements in the list that sum to zero, and False otherwise.
+     *
+     * Examples:
+     * >>> triplesSumToZero(Arrays.asList(1, 3, 5, 0))
+     * false
+     * >>> triplesSumToZero(Arrays.asList(1, 3, -2, 1))
+     * true
+     * >>> triplesSumToZero(Arrays.asList(1, 2, 3, 7))
+     * false
+     * >>> triplesSumToZero(Arrays.asList(2, 4, -5, 3, 9, 7))
+     * true
+     * >>> triplesSumToZero(Arrays.asList(1))
+     * false
+     */
+    public boolean triplesSumToZero(List<Integer> l) {
+        for (int i = 0; i < l.size(); i++) {
+            for (int j = i + 1; j < l.size(); j++) {
+                for (int k = j + 1; k < l.size(); k++) {
+                    if (l.get(i) + l.get(j) + l.get(k) == 0) { return true; }
+                }
+            }
+        }
+        return false;
+    }
+
+    //=================================================================================================
+    // Test 40
+    //=================================================================================================
+    /**
+     * Imagine a road that's a perfectly straight infinitely long line.
+     * n cars are driving left to right; simultaneously, a different set of n cars are driving right to left.
+     * The two sets of cars start out being very far from each other. All cars move at the same speed.
+     *
+     * Two cars are said to collide when a car that's moving left to right hits a car that's moving right to left.
+     * However, the cars are infinitely sturdy and strong; as a result, they continue moving in their trajectory as if they did not collide.
+     *
+     * This function outputs the number of such collisions.
+     */
+    public int carRaceCollision(int n) {
+        return n * n;
+    }
+
+    //=================================================================================================
+    // Test 41
+    //=================================================================================================
+    /**
+     * Return list with elements incremented by 1.
+     *
+     * Examples:
+     * >>> incrList(Arrays.asList(1, 2, 3))
+     * [2, 3, 4]
+     * >>> incrList(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))
+     * [6, 4, 6, 3, 4, 4, 10, 1, 124]
+     */
+    public List<Integer> incrList(List<Integer> l) {
+        return l.stream().map(p -> p + 1).collect(Collectors.toList());
+    }
+
+    //=================================================================================================
+    // Test 42
+    //=================================================================================================
+    /**
+     * pairsSumToZero takes a list of integers as an input.
+     * It returns True if there are two distinct elements in the list that sum to zero, and False otherwise.
+     *
+     * Examples:
+     * >>> pairsSumToZero(Arrays.asList(1, 3, 5, 0))
+     * false
+     * >>> pairsSumToZero(Arrays.asList(1, 3, -2, 1))
+     * false
+     * >>> pairsSumToZero(Arrays.asList(1, 2, 3, 7))
+     * false
+     * >>> pairsSumToZero(Arrays.asList(2, 4, -5, 3, 5, 7))
+     * true
+     * >>> pairsSumToZero(Arrays.asList(1))
+     * false
+     */
+    public boolean pairsSumToZero(List<Integer> l) {
+        for (int i = 0; i < l.size(); i++) {
+            for (int j = i + 1; j < l.size(); j++) {
+                if (l.get(i) + l.get(j) == 0) { return true; }
+            }
+        }
+        return false;
+    }
+
+    //=================================================================================================
+    // Test 43
+    //=================================================================================================
+    /**
+     * Change numerical base of input number x to base.
+     * Return string representation after the conversion.
+     * Base numbers are less than 10.
+     *
+     * Examples:
+     * >>> changeBase(8, 3)
+     * "22"
+     * >>> changeBase(8, 2)
+     * "1000"
+     * >>> changeBase(7, 2)
+     * "111"
+     */
+    public String changeBase(int x, int base) {
+        StringBuilder ret = new StringBuilder();
+        while (x > 0) {
+            ret.append(String.valueOf(x % base));
+            x /= base;
+        }
+        return ret.reverse().toString();
+    }
+
+    //=================================================================================================
+    // Test 44
+    //=================================================================================================
+    /**
+     * Given length of a side and height, return area for a triangle.
+     *
+     * Examples:
+     * >>> triangleArea(5, 3)
+     * 7.5
+     */
+    public double triangleArea(double a, double h) {
+        return a * h / 2;
+    }
+
+    //=================================================================================================
+    // Test 45
+    //=================================================================================================
+    /**
+     * The Fib4 number sequence is a sequence similar to the Fibonacci sequence that's defined as follows:
+     * - fib4(0) -> 0
+     * - fib4(1) -> 0
+     * - fib4(2) -> 2
+     * - fib4(3) -> 0
+     * - fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4)
+     *
+     * Please write a function to efficiently compute the n-th element of the fib4 number sequence.
+     * Do not use recursion.
+     *
+     * Examples:
+     * >>> fib4(5)
+     * 4
+     * >>> fib4(6)
+     * 8
+     * >>> fib4(7)
+     * 14
+     */
+    public int fib4(int n) {
+        List<Integer> results = new ArrayList<>();
+        results.add(0); results.add(0);
+        results.add(2); results.add(0);
+        if (n < 4) { return results.get(n); }
+        for (int i = 4; i <= n; i++) {
+            results.add(results.get(0) + results.get(1) + results.get(2) + results.get(3));
+            results.remove(0);
+        }
+        return results.get(3);
+    }
+
+    //=================================================================================================
+    // Test 46
+    //=================================================================================================
+    /**
+     * Return median of elements in the list l.
+     *
+     * Examples:
+     * >>> median(Arrays.asList(3, 1, 2, 4, 5))
+     * 3
+     * >>> median(Arrays.asList(-10, 4, 6, 1000, 10, 20))
+     * 15.0
+     */
+    public double median(List<Integer> l) {
+        List<Integer> list = l;
+        Collections.sort(list);
+        if (l.size() % 2 == 1) {
+            return l.get(l.size() / 2);
+        } else {
+            return (l.get(l.size() / 2 - 1) + l.get(l.size() / 2)) / 2.0;
+        }
+    }
+
+    //=================================================================================================
+    // Test 47
+    //=================================================================================================
+    /**
+     * Checks if the given string is a palindrome.
+     *
+     * Examples:
+     * >>> isPalindrome("")
+     * true
+     * >>> isPalindrome("aba")
+     * true
+     * >>> isPalindrome("aaaaa")
+     * true
+     * >>> isPalindrome("zbcd")
+     * false
+     */
+    public boolean tisPalindrome(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) != text.charAt(text.length() - 1 - i)) { return false; }
+        } return true;
+    }
+
+    //=================================================================================================
+    // Test 48
+    //=================================================================================================
+    /**
+     * Return 2^n modulo p (be aware of numerics).
+     *
+     * Examples:
+     * >>> modp(3, 5)
+     * 3
+     * >>> modp(1101, 101)
+     * 2
+     * >>> modp(0, 101)
+     * 1
+     * >>> modp(3, 11)
+     * 8
+     * >>> modp(100, 101)
+     * 1
+     */
+    public int modp(int n, int p) {
+        int ret = 1;
+        for (int i = 0; i < n; i++) { ret = (ret * 2) % p; }
+        return ret;
+    }
+
+    //=================================================================================================
+    // Test 49
+    //=================================================================================================
+    /**
+     * removeVowels is a function that takes a string and returns a string without vowels.
+     *
+     * Examples:
+     * >>> removeVowels("")
+     * ""
+     * >>> removeVowels("abcdef\nghijklm")
+     * "bcdf\nghjklm"
+     * >>> removeVowels("abcdef")
+     * "bcdf"
+     * >>> removeVowels("aaaaa")
+     * ""
+     * >>> removeVowels("aaBAA")
+     * "B"
+     * >>> removeVowels("zbcd")
+     * "zbcd"
+     */
+    public String removeVowels(String text) {
+        StringBuilder sb = new StringBuilder();
+        for (char ch : text.toCharArray()) {
+            if ("aeiou".indexOf(Character.toLowerCase(ch)) == -1) { sb.append(ch); }
+        }
+        return sb.toString();
+    }
+
+    //=================================================================================================
+    // Test 50
+    //=================================================================================================
+    /**
+     * Return True if all numbers in the list l are below threshold t.
+     *
+     * Examples:
+     * >>> belowThreshold(Arrays.asList(1, 2, 4, 10), 100)
+     * true
+     * >>> belowThreshold(Arrays.asList(1, 20, 4, 10), 5)
+     * false
+     */
+    public boolean belowThreshold(List<Integer> l, int t) {
+        for (int e : l) {
+            if (e >= t) { return false; }
+        }
+        return true;
+    }
 
 }
 

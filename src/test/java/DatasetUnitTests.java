@@ -566,7 +566,439 @@ class DatasetUnitTests {
         if (correct.contains(false)) { throw new AssertionError(); }
     }
 
+    //=================================================================================================
+    // Test 31
+    //=================================================================================================
+    /**
+     * Return true if a given number is prime, and false otherwise.
+     *
+     * Examples:
+     * >>> isPrime(6) false
+     * >>> isPrime(101) true
+     * >>> isPrime(11) true
+     * >>> isPrime(13441) true
+     * >>> isPrime(61) true
+     * >>> isPrime(4) false
+     * >>> isPrime(1) false
+     */
+    @Test
+    void DatasetUnitTest31() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( !s.isPrime(6), s.isPrime(101), s.isPrime(11), s.isPrime(13441), s.isPrime(61), !s.isPrime(4), !s.isPrime(1) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
 
+    //=================================================================================================
+    // Test 32
+    //=================================================================================================
+    /**
+     * Evaluates polynomial with coefficients xs at point x.
+     *
+     * Formula:
+     * xs[0] + xs[1] * x + xs[2] * x^2 + ... + xs[n] * x^n
+     */
+    @Test
+    void DatasetUnitTest32() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( Math.abs(s.findZero(new ArrayList<>(Arrays.asList(1.,2.)))+0.5)<1e-4, Math.abs(s.findZero(new ArrayList<>(Arrays.asList(-6.,11.,-6.,1.)))-1)<1e-4 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
 
+    //=================================================================================================
+    // Test 33
+    //=================================================================================================
+    /**
+     * This function takes a list l and returns a list l' such that:
+     * - l' is identical to l in the indices that are not divisible by three,
+     * - its values at the indices that are divisible by three are equal to the values of the corresponding indices of l, but sorted.
+     *
+     * Example:
+     * >>> sortThird(Arrays.asList(1, 2, 3))
+     * [1, 2, 3]
+     * >>> sortThird(Arrays.asList(5, 6, 3, 4, 8, 9, 2))
+     * [2, 6, 3, 4, 8, 9, 5]
+     */
+    @Test
+    void DatasetUnitTest33() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.sortThird(new ArrayList<>(Arrays.asList(1,2,3))).equals(Arrays.asList(1,2,3)), s.sortThird(new ArrayList<>(Arrays.asList(5, 6, 3, 4, 8, 9, 2))).equals(Arrays.asList(2, 6, 3, 4, 8, 9, 5)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
 
+    //=================================================================================================
+    // Test 34
+    //=================================================================================================
+    /**
+     * Return sorted unique elements in a list.
+     *
+     * Example:
+     * >>> unique(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))
+     * [0, 2, 3, 5, 9, 123]
+     */
+    @Test
+    void DatasetUnitTest34() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.unique(new ArrayList<>(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))).equals(Arrays.asList(0, 2, 3, 5, 9, 123)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 35
+    //=================================================================================================
+    /**
+     * Return maximum element in the list.
+     *
+     * Example:
+     * >>> maxElement(Arrays.asList(1, 2, 3))
+     * 3
+     * >>> maxElement(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))
+     * 123
+     */
+    @Test
+    void DatasetUnitTest35() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.maxElement(new ArrayList<>(Arrays.asList(1, 2, 3))) == 3, s.maxElement(new ArrayList<>(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))) == 123 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 36
+    //=================================================================================================
+    /**
+     * Return the number of times the digit 7 appears in integers less than n
+     * which are divisible by 11 or 13.
+     *
+     * Example:
+     * >>> fizzBuzz(50)
+     * 0
+     * >>> fizzBuzz(78)
+     * 2
+     * >>> fizzBuzz(79)
+     * 3
+     */
+    @Test
+    void DatasetUnitTest36() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.fizzBuzz(50) == 0, s.fizzBuzz(78) == 2, s.fizzBuzz(79) == 3 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 37
+    //=================================================================================================
+    /**
+     * This function takes a list l and returns a list l' such that:
+     * - l' is identical to l in the odd indices,
+     * - its values at the even indices are equal to the values of the even indices of l, but sorted.
+     *
+     * Example:
+     * >>> sortEven(Arrays.asList(1, 2, 3))
+     * [1, 2, 3]
+     * >>> sortEven(Arrays.asList(5, 6, 3, 4))
+     * [3, 6, 5, 4]
+     */
+    @Test
+    void DatasetUnitTest37() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.sortEven(new ArrayList<>(Arrays.asList(1, 2, 3))).equals(Arrays.asList(1, 2, 3)), s.sortEven(new ArrayList<>(Arrays.asList(5,6,3,4))).equals(Arrays.asList(3,6,5,4)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 38
+    //=================================================================================================
+    /**
+     * primeFib returns the n-th number that is both a Fibonacci number and prime.
+     *
+     * Examples:
+     * >>> primeFib(1)
+     * 2
+     * >>> primeFib(2)
+     * 3
+     * >>> primeFib(3)
+     * 5
+     * >>> primeFib(4)
+     * 13
+     * >>> primeFib(5)
+     * 89
+     */
+    @Test
+    void DatasetUnitTest38() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.primeFib(1) == 2, s.primeFib(2) == 3, s.primeFib(3) == 5, s.primeFib(4) == 13, s.primeFib(5) == 89 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 39
+    //=================================================================================================
+    /**
+     * triplesSumToZero takes a list of integers as an input.
+     * It returns True if there are three distinct elements in the list that sum to zero, and False otherwise.
+     *
+     * Examples:
+     * >>> triplesSumToZero(Arrays.asList(1, 3, 5, 0))
+     * false
+     * >>> triplesSumToZero(Arrays.asList(1, 3, -2, 1))
+     * true
+     * >>> triplesSumToZero(Arrays.asList(1, 2, 3, 7))
+     * false
+     * >>> triplesSumToZero(Arrays.asList(2, 4, -5, 3, 9, 7))
+     * true
+     * >>> triplesSumToZero(Arrays.asList(1))
+     * false
+     */
+    @Test
+    void DatasetUnitTest39() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( !s.triplesSumToZero(new ArrayList<>(Arrays.asList(1, 3, 5, 0))), s.triplesSumToZero(new ArrayList<>(Arrays.asList(1, 3, -2, 1))), !s.triplesSumToZero(new ArrayList<>(Arrays.asList(1, 2, 3, 7))), s.triplesSumToZero(new ArrayList<>(Arrays.asList(2, 4, -5, 3, 9, 7))) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 40
+    //=================================================================================================
+    /**
+     * Imagine a road that's a perfectly straight infinitely long line.
+     * n cars are driving left to right; simultaneously, a different set of n cars are driving right to left.
+     * The two sets of cars start out being very far from each other. All cars move at the same speed.
+     *
+     * Two cars are said to collide when a car that's moving left to right hits a car that's moving right to left.
+     * However, the cars are infinitely sturdy and strong; as a result, they continue moving in their trajectory as if they did not collide.
+     *
+     * This function outputs the number of such collisions.
+     */
+    @Test
+    void DatasetUnitTest40() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.carRaceCollision(2) == 4, s.carRaceCollision(3) == 9, s.carRaceCollision(4) == 16, s.carRaceCollision(8) == 64, s.carRaceCollision(10) == 100 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 41
+    //=================================================================================================
+    /**
+     * Return list with elements incremented by 1.
+     *
+     * Examples:
+     * >>> incrList(Arrays.asList(1, 2, 3))
+     * [2, 3, 4]
+     * >>> incrList(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))
+     * [6, 4, 6, 3, 4, 4, 10, 1, 124]
+     */
+    @Test
+    void DatasetUnitTest41() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.incrList(new ArrayList<>(Arrays.asList(1, 2, 3))).equals(Arrays.asList(2, 3, 4)), s.incrList(new ArrayList<>(Arrays.asList(5, 2, 5, 2, 3, 3, 9, 0, 123))).equals(Arrays.asList(6, 3, 6, 3, 4, 4, 10, 1, 124)) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 42
+    //=================================================================================================
+    /**
+     * pairsSumToZero takes a list of integers as an input.
+     * It returns True if there are two distinct elements in the list that sum to zero, and False otherwise.
+     *
+     * Examples:
+     * >>> pairsSumToZero(Arrays.asList(1, 3, 5, 0))
+     * false
+     * >>> pairsSumToZero(Arrays.asList(1, 3, -2, 1))
+     * false
+     * >>> pairsSumToZero(Arrays.asList(1, 2, 3, 7))
+     * false
+     * >>> pairsSumToZero(Arrays.asList(2, 4, -5, 3, 5, 7))
+     * true
+     * >>> pairsSumToZero(Arrays.asList(1))
+     * false
+     */
+    @Test
+    void DatasetUnitTest42() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( !s.pairsSumToZero(new ArrayList<>(Arrays.asList(1, 3, 5, 0))), !s.pairsSumToZero(new ArrayList<>(Arrays.asList(1, 3, -2, 1))), !s.pairsSumToZero(new ArrayList<>(Arrays.asList(1, 2, 3, 7))), s.pairsSumToZero(new ArrayList<>(Arrays.asList(2, 4, -5, 3, 5, 7))) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 43
+    //=================================================================================================
+    /**
+     * Change numerical base of input number x to base.
+     * Return string representation after the conversion.
+     * Base numbers are less than 10.
+     *
+     * Examples:
+     * >>> changeBase(8, 3)
+     * "22"
+     * >>> changeBase(8, 2)
+     * "1000"
+     * >>> changeBase(7, 2)
+     * "111"
+     */
+    @Test
+    void DatasetUnitTest43() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( Objects.equals(s.changeBase(8, 3), "22"), Objects.equals(s.changeBase(8, 2), "1000"), Objects.equals(s.changeBase(7, 2), "111") );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 44
+    //=================================================================================================
+    /**
+     * Given length of a side and height, return area for a triangle.
+     *
+     * Examples:
+     * >>> triangleArea(5, 3)
+     * 7.5
+     */
+    @Test
+    void DatasetUnitTest44() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.triangleArea(5, 3) == 7.5 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 45
+    //=================================================================================================
+    /**
+     * The Fib4 number sequence is a sequence similar to the Fibonacci sequence that's defined as follows:
+     * - fib4(0) -> 0
+     * - fib4(1) -> 0
+     * - fib4(2) -> 2
+     * - fib4(3) -> 0
+     * - fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4)
+     *
+     * Please write a function to efficiently compute the n-th element of the fib4 number sequence.
+     * Do not use recursion.
+     *
+     * Examples:
+     * >>> fib4(5)
+     * 4
+     * >>> fib4(6)
+     * 8
+     * >>> fib4(7)
+     * 14
+     */
+    @Test
+    void DatasetUnitTest45() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.fib4(5) == 4, s.fib4(6) == 8, s.fib4(7) == 14 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 46
+    //=================================================================================================
+    /**
+     * Return median of elements in the list l.
+     *
+     * Examples:
+     * >>> median(Arrays.asList(3, 1, 2, 4, 5))
+     * 3
+     * >>> median(Arrays.asList(-10, 4, 6, 1000, 10, 20))
+     * 15.0
+     */
+    @Test
+    void DatasetUnitTest46() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.median(new ArrayList<>(Arrays.asList(3, 1, 2, 4, 5))) == 3, s.median(new ArrayList<>(Arrays.asList(-10, 4, 6, 1000, 10, 20))) == 8.0 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 47
+    //=================================================================================================
+    /**
+     * Checks if the given string is a palindrome.
+     *
+     * Examples:
+     * >>> isPalindrome("")
+     * true
+     * >>> isPalindrome("aba")
+     * true
+     * >>> isPalindrome("aaaaa")
+     * true
+     * >>> isPalindrome("zbcd")
+     * false
+     */
+    @Test
+    void DatasetUnitTest47() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.isPalindrome(""), s.isPalindrome("aba"), s.isPalindrome("aaaaa"), !s.isPalindrome("zbcd") );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 48
+    //=================================================================================================
+    /**
+     * Return 2^n modulo p (be aware of numerics).
+     *
+     * Examples:
+     * >>> modp(3, 5)
+     * 3
+     * >>> modp(1101, 101)
+     * 2
+     * >>> modp(0, 101)
+     * 1
+     * >>> modp(3, 11)
+     * 8
+     * >>> modp(100, 101)
+     * 1
+     */
+    @Test
+    void DatasetUnitTest48() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.modp(3, 5) == 3, s.modp(1101, 101) == 2, s.modp(0, 101) == 1, s.modp(3, 11) == 8, s.modp(100, 101) == 1 );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 49
+    //=================================================================================================
+    /**
+     * removeVowels is a function that takes a string and returns a string without vowels.
+     *
+     * Examples:
+     * >>> removeVowels("")
+     * ""
+     * >>> removeVowels("abcdef\nghijklm")
+     * "bcdf\nghjklm"
+     * >>> removeVowels("abcdef")
+     * "bcdf"
+     * >>> removeVowels("aaaaa")
+     * ""
+     * >>> removeVowels("aaBAA")
+     * "B"
+     * >>> removeVowels("zbcd")
+     * "zbcd"
+     */
+    @Test
+    void DatasetUnitTest49() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( Objects.equals(s.removeVowels(""), ""), Objects.equals(s.removeVowels("abcdef\nghijklm"), "bcdf\nghjklm"), Objects.equals(s.removeVowels("abcdef"), "bcdf"), Objects.equals(s.removeVowels("aaaaa"), ""), Objects.equals(s.removeVowels("aaBAA"), "B"), Objects.equals(s.removeVowels("zbcd"), "zbcd") );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
+
+    //=================================================================================================
+    // Test 50
+    //=================================================================================================
+    /**
+     * Return True if all numbers in the list l are below threshold t.
+     *
+     * Examples:
+     * >>> belowThreshold(Arrays.asList(1, 2, 4, 10), 100)
+     * true
+     * >>> belowThreshold(Arrays.asList(1, 20, 4, 10), 5)
+     * false
+     */
+    @Test
+    void DatasetUnitTest50() {
+        Solution s = new Solution();
+        List<Boolean> correct = Arrays.asList( s.belowThreshold(new ArrayList<>(Arrays.asList(1, 2, 4, 10)), 100), !s.belowThreshold(new ArrayList<>(Arrays.asList(1, 20, 4, 10)), 5) );
+        if (correct.contains(false)) { throw new AssertionError(); }
+    }
 }
