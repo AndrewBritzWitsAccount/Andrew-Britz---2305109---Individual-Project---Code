@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad399f06-3e93-49c8-a713-b01bf3990573" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/LLMUnitTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DatasetUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatasetUnitTests.java" afterDir="false" />
@@ -13,6 +14,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\User\4th Year Projects\Software III\Individual Project - Software III\AndrewBritzProjectCode\htmlReport" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,6 +45,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.DatasetUnitTests.DatasetUnitTest0.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest1.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest10.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest11.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest12.executor": "Run",
@@ -50,6 +57,8 @@
     "JUnit.DatasetUnitTests.DatasetUnitTest16.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest17.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest18.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest19.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest2.executor": "Coverage",
     "JUnit.DatasetUnitTests.DatasetUnitTest20.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest21.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest22.executor": "Run",
@@ -60,6 +69,7 @@
     "JUnit.DatasetUnitTests.DatasetUnitTest27.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest28.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest29.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest3.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest30.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest31.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest32.executor": "Run",
@@ -70,6 +80,7 @@
     "JUnit.DatasetUnitTests.DatasetUnitTest37.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest38.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest39.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest4.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest40.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest41.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest42.executor": "Run",
@@ -80,18 +91,74 @@
     "JUnit.DatasetUnitTests.DatasetUnitTest47.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest48.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest49.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest5.executor": "Run",
+    "JUnit.DatasetUnitTests.DatasetUnitTest50.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest6.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest7.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest8.executor": "Run",
     "JUnit.DatasetUnitTests.DatasetUnitTest9.executor": "Run",
     "JUnit.DatasetUnitTests.executor": "Run",
+    "JUnit.DatasetUnitTests.testHasCloseElements.executor": "Run",
+    "JUnit.LLMUnitTests.testAllPrefixes.executor": "Run",
+    "JUnit.LLMUnitTests.testBelowZero.executor": "Run",
+    "JUnit.LLMUnitTests.testCarRaceCollision.executor": "Run",
+    "JUnit.LLMUnitTests.testChangeBase.executor": "Run",
+    "JUnit.LLMUnitTests.testConcatenate.executor": "Run",
+    "JUnit.LLMUnitTests.testCountDistinctCharacters.executor": "Run",
+    "JUnit.LLMUnitTests.testEmptyList.executor": "Run",
+    "JUnit.LLMUnitTests.testFactorize.executor": "Run",
+    "JUnit.LLMUnitTests.testFib4.executor": "Run",
+    "JUnit.LLMUnitTests.testFilterByPrefix.executor": "Run",
+    "JUnit.LLMUnitTests.testFilterBySubstring.executor": "Run",
+    "JUnit.LLMUnitTests.testFilterIntegers.executor": "Run",
+    "JUnit.LLMUnitTests.testFindClosestElements.executor": "Run",
+    "JUnit.LLMUnitTests.testFindZero.executor": "Run",
+    "JUnit.LLMUnitTests.testFizzBuzz.executor": "Run",
+    "JUnit.LLMUnitTests.testFlipCase.executor": "Run",
+    "JUnit.LLMUnitTests.testGetPositive.executor": "Run",
+    "JUnit.LLMUnitTests.testGreatestCommonDivisor.executor": "Run",
+    "JUnit.LLMUnitTests.testHasCloseElements.executor": "Run",
+    "JUnit.LLMUnitTests.testHowManyTimes.executor": "Run",
+    "JUnit.LLMUnitTests.testIncrList.executor": "Run",
+    "JUnit.LLMUnitTests.testIntersperse.executor": "Run",
+    "JUnit.LLMUnitTests.testIsPalindrome.executor": "Run",
+    "JUnit.LLMUnitTests.testIsPalindrome1.executor": "Run",
+    "JUnit.LLMUnitTests.testIsPrime.executor": "Run",
+    "JUnit.LLMUnitTests.testLargestDivisor.executor": "Run",
+    "JUnit.LLMUnitTests.testLongest.executor": "Run",
+    "JUnit.LLMUnitTests.testMakePalindrome.executor": "Run",
+    "JUnit.LLMUnitTests.testMaxElement.executor": "Run",
+    "JUnit.LLMUnitTests.testMeanAbsoluteDeviation.executor": "Run",
+    "JUnit.LLMUnitTests.testMedian.executor": "Run",
+    "JUnit.LLMUnitTests.testModp.executor": "Run",
+    "JUnit.LLMUnitTests.testPairsSumToZero.executor": "Run",
+    "JUnit.LLMUnitTests.testParseMusic.executor": "Run",
+    "JUnit.LLMUnitTests.testParseNestedParens.executor": "Run",
+    "JUnit.LLMUnitTests.testPoly.executor": "Run",
+    "JUnit.LLMUnitTests.testPolyAndFindZero.executor": "Run",
+    "JUnit.LLMUnitTests.testPrimeFib.executor": "Run",
+    "JUnit.LLMUnitTests.testRemoveDuplicates.executor": "Run",
+    "JUnit.LLMUnitTests.testRescaleToUnit.executor": "Run",
+    "JUnit.LLMUnitTests.testRollingMax.executor": "Run",
+    "JUnit.LLMUnitTests.testSeparateParenGroups.executor": "Run",
+    "JUnit.LLMUnitTests.testSortEven.executor": "Run",
+    "JUnit.LLMUnitTests.testSortNumbers.executor": "Run",
+    "JUnit.LLMUnitTests.testSortThird.executor": "Run",
+    "JUnit.LLMUnitTests.testStringSequence.executor": "Run",
+    "JUnit.LLMUnitTests.testStringXor.executor": "Run",
+    "JUnit.LLMUnitTests.testStrlen.executor": "Run",
+    "JUnit.LLMUnitTests.testSumProduct.executor": "Run",
+    "JUnit.LLMUnitTests.testTriangleArea.executor": "Run",
+    "JUnit.LLMUnitTests.testTriplesSumToZero.executor": "Run",
+    "JUnit.LLMUnitTests.testTruncateNumber.executor": "Run",
+    "JUnit.LLMUnitTests.testUnique.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/4th Year Projects/Software III/Individual Project - Software III/TestingHumanEval-x/src/test/java/SolutionTest.java",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
+    "settings.editor.selected.configurable": "coverage"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -102,51 +169,51 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatasetUnitTests">
-    <configuration name="DatasetUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LLMUnitTests">
+    <configuration name="LLMUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
+      <option name="MAIN_CLASS_NAME" value="LLMUnitTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest47" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LLMUnitTests.testBelowThreshold" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest47" />
+      <option name="MAIN_CLASS_NAME" value="LLMUnitTests" />
+      <option name="METHOD_NAME" value="testBelowThreshold" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest48" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LLMUnitTests.testIsPalindrome1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest48" />
+      <option name="MAIN_CLASS_NAME" value="LLMUnitTests" />
+      <option name="METHOD_NAME" value="testIsPalindrome1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest49" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LLMUnitTests.testModp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest49" />
+      <option name="MAIN_CLASS_NAME" value="LLMUnitTests" />
+      <option name="METHOD_NAME" value="testModp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatasetUnitTests.DatasetUnitTest50" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LLMUnitTests.testRemoveVowels" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AndrewBritzProjectCode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatasetUnitTests" />
-      <option name="METHOD_NAME" value="DatasetUnitTest50" />
+      <option name="MAIN_CLASS_NAME" value="LLMUnitTests" />
+      <option name="METHOD_NAME" value="testRemoveVowels" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DatasetUnitTests" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest50" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest49" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest48" />
-        <item itemvalue="JUnit.DatasetUnitTests.DatasetUnitTest47" />
+        <item itemvalue="JUnit.LLMUnitTests" />
+        <item itemvalue="JUnit.LLMUnitTests.testBelowThreshold" />
+        <item itemvalue="JUnit.LLMUnitTests.testRemoveVowels" />
+        <item itemvalue="JUnit.LLMUnitTests.testModp" />
+        <item itemvalue="JUnit.LLMUnitTests.testIsPalindrome1" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +259,57 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests.ic" NAME="DatasetUnitTests Coverage Results" MODIFIED="1711219360168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest19.ic" NAME="DatasetUnitTests.DatasetUnitTest19 Coverage Results" MODIFIED="1711454524267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest44.ic" NAME="DatasetUnitTests.DatasetUnitTest44 Coverage Results" MODIFIED="1711454698480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest15.ic" NAME="DatasetUnitTests.DatasetUnitTest15 Coverage Results" MODIFIED="1711454026049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest6.ic" NAME="DatasetUnitTests.DatasetUnitTest6 Coverage Results" MODIFIED="1711453652445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest40.ic" NAME="DatasetUnitTests.DatasetUnitTest40 Coverage Results" MODIFIED="1711454670789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest21.ic" NAME="DatasetUnitTests.DatasetUnitTest21 Coverage Results" MODIFIED="1711454538367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest2.ic" NAME="DatasetUnitTests.DatasetUnitTest2 Coverage Results" MODIFIED="1711453458294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest50.ic" NAME="DatasetUnitTests.DatasetUnitTest50 Coverage Results" MODIFIED="1711454743799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest38.ic" NAME="DatasetUnitTests.DatasetUnitTest38 Coverage Results" MODIFIED="1711454656026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest29.ic" NAME="DatasetUnitTests.DatasetUnitTest29 Coverage Results" MODIFIED="1711454591832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest34.ic" NAME="DatasetUnitTests.DatasetUnitTest34 Coverage Results" MODIFIED="1711454629342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest30.ic" NAME="DatasetUnitTests.DatasetUnitTest30 Coverage Results" MODIFIED="1711454598212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest11.ic" NAME="DatasetUnitTests.DatasetUnitTest11 Coverage Results" MODIFIED="1711453847403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest25.ic" NAME="DatasetUnitTests.DatasetUnitTest25 Coverage Results" MODIFIED="1711454565047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest48.ic" NAME="DatasetUnitTests.DatasetUnitTest48 Coverage Results" MODIFIED="1711454728096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest45.ic" NAME="DatasetUnitTests.DatasetUnitTest45 Coverage Results" MODIFIED="1711454706943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest18.ic" NAME="DatasetUnitTests.DatasetUnitTest18 Coverage Results" MODIFIED="1711454517846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest1.ic" NAME="DatasetUnitTests.DatasetUnitTest1 Coverage Results" MODIFIED="1711453340647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest41.ic" NAME="DatasetUnitTests.DatasetUnitTest41 Coverage Results" MODIFIED="1711454678071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest14.ic" NAME="DatasetUnitTests.DatasetUnitTest14 Coverage Results" MODIFIED="1711453945789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest5.ic" NAME="DatasetUnitTests.DatasetUnitTest5 Coverage Results" MODIFIED="1711453533021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest20.ic" NAME="DatasetUnitTests.DatasetUnitTest20 Coverage Results" MODIFIED="1711454532203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest9.ic" NAME="DatasetUnitTests.DatasetUnitTest9 Coverage Results" MODIFIED="1711453773858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest35.ic" NAME="DatasetUnitTests.DatasetUnitTest35 Coverage Results" MODIFIED="1711454636274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest39.ic" NAME="DatasetUnitTests.DatasetUnitTest39 Coverage Results" MODIFIED="1711454664027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest31.ic" NAME="DatasetUnitTests.DatasetUnitTest31 Coverage Results" MODIFIED="1711454604350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest10.ic" NAME="DatasetUnitTests.DatasetUnitTest10 Coverage Results" MODIFIED="1711453813040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest49.ic" NAME="DatasetUnitTests.DatasetUnitTest49 Coverage Results" MODIFIED="1711454736653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest24.ic" NAME="DatasetUnitTests.DatasetUnitTest24 Coverage Results" MODIFIED="1711454558436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest28.ic" NAME="DatasetUnitTests.DatasetUnitTest28 Coverage Results" MODIFIED="1711454584974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest4.ic" NAME="DatasetUnitTests.DatasetUnitTest4 Coverage Results" MODIFIED="1711453507018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest17.ic" NAME="DatasetUnitTests.DatasetUnitTest17 Coverage Results" MODIFIED="1711454510103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest42.ic" NAME="DatasetUnitTests.DatasetUnitTest42 Coverage Results" MODIFIED="1711454684943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest23.ic" NAME="DatasetUnitTests.DatasetUnitTest23 Coverage Results" MODIFIED="1711454551908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest0.ic" NAME="DatasetUnitTests.DatasetUnitTest0 Coverage Results" MODIFIED="1711452436329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest13.ic" NAME="DatasetUnitTests.DatasetUnitTest13 Coverage Results" MODIFIED="1711453907708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest8.ic" NAME="DatasetUnitTests.DatasetUnitTest8 Coverage Results" MODIFIED="1711453747310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest36.ic" NAME="DatasetUnitTests.DatasetUnitTest36 Coverage Results" MODIFIED="1711454642655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest32.ic" NAME="DatasetUnitTests.DatasetUnitTest32 Coverage Results" MODIFIED="1711454616137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest27.ic" NAME="DatasetUnitTests.DatasetUnitTest27 Coverage Results" MODIFIED="1711454578672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest46.ic" NAME="DatasetUnitTests.DatasetUnitTest46 Coverage Results" MODIFIED="1711454714154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests.ic" NAME="DatasetUnitTests Coverage Results" MODIFIED="1711452014633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest43.ic" NAME="DatasetUnitTests.DatasetUnitTest43 Coverage Results" MODIFIED="1711454691961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest22.ic" NAME="DatasetUnitTests.DatasetUnitTest22 Coverage Results" MODIFIED="1711454545272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest16.ic" NAME="DatasetUnitTests.DatasetUnitTest16 Coverage Results" MODIFIED="1711454500625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest7.ic" NAME="DatasetUnitTests.DatasetUnitTest7 Coverage Results" MODIFIED="1711453694231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest3.ic" NAME="DatasetUnitTests.DatasetUnitTest3 Coverage Results" MODIFIED="1711453479630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest37.ic" NAME="DatasetUnitTests.DatasetUnitTest37 Coverage Results" MODIFIED="1711454649122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest33.ic" NAME="DatasetUnitTests.DatasetUnitTest33 Coverage Results" MODIFIED="1711454622897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest12.ic" NAME="DatasetUnitTests.DatasetUnitTest12 Coverage Results" MODIFIED="1711453880908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest26.ic" NAME="DatasetUnitTests.DatasetUnitTest26 Coverage Results" MODIFIED="1711454572301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AndrewBritzProjectCode$DatasetUnitTests_DatasetUnitTest47.ic" NAME="DatasetUnitTests.DatasetUnitTest47 Coverage Results" MODIFIED="1711454720878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

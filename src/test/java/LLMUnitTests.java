@@ -1,9 +1,10 @@
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
-class DatasetUnitTests {
+import static org.junit.jupiter.api.Assertions.*;
+
+class LLMUnitTests {
     //==================================================================================================
     //Test 0
     //==================================================================================================
@@ -40,14 +41,12 @@ class DatasetUnitTests {
      * ["()", "(())", "(()())"]
      */
     @Test
-    void DatasetUnitTest1() {
+    public void testSeparateParenGroups() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(
-                s.separateParenGroups("( ) (( )) (( )( ))").equals(Arrays.asList("()", "(())", "(()())"))
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+        String input = "( ) (( )) (( )( ))";
+        List<String> expected = Arrays.asList("()", "(())", "(()())");
+        List<String> actual = s.separateParenGroups(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -63,12 +62,12 @@ class DatasetUnitTests {
      * 0.5
      */
     @Test
-    void DatasetUnitTest2() {
+    public void testTruncateNumber() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(s.truncateNumber(3.5) == 0.5);
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+        double input = 3.5;
+        double expected = 0.5;
+        double actual = s.truncateNumber(input);
+        assertEquals(expected, actual, 0.000001);
     }
 
     //=================================================================================================
@@ -86,12 +85,12 @@ class DatasetUnitTests {
      * true
      */
     @Test
-    void DatasetUnitTest3() {
+    public void testBelowZero() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(!s.belowZero(new ArrayList<>(Arrays.asList(1, 2, 3))), s.belowZero(new ArrayList<>(Arrays.asList(1, 2, -4, 5))));
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+        List<Integer> operations = Arrays.asList(1, 2, 3);
+        assertFalse(s.belowZero(operations));
+        operations = Arrays.asList(1, 2, -4, 5);
+        assertTrue(s.belowZero(operations));
     }
 
     //=================================================================================================
@@ -107,12 +106,12 @@ class DatasetUnitTests {
      * 1.0
      */
     @Test
-    void DatasetUnitTest4() {
+    public void testMeanAbsoluteDeviation() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(Math.abs(s.meanAbsoluteDeviation(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0))) - 1.0) < 1e-6);
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+        List<Double> numbers = Arrays.asList(1.0, 2.0, 3.0, 4.0);
+        double expected = 1.0;
+        double actual = s.meanAbsoluteDeviation(numbers);
+        assertEquals(expected, actual, 0.000001);
     }
 
     //=================================================================================================
@@ -128,12 +127,13 @@ class DatasetUnitTests {
      * [1, 4, 2, 4, 3]
      */
     @Test
-    void DatasetUnitTest5() {
+    public void testIntersperse() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(s.intersperse(new ArrayList<>(List.of()), 4).equals(List.of()), s.intersperse(new ArrayList<>(Arrays.asList(1, 2, 3)), 4).equals(Arrays.asList(1, 4, 2, 4, 3)));
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+        List<Integer> numbers = Arrays.asList(1, 2, 3);
+        int delimiter = 4;
+        List<Integer> expected = Arrays.asList(1, 4, 2, 4, 3);
+        List<Integer> actual = s.intersperse(numbers, delimiter);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -148,12 +148,12 @@ class DatasetUnitTests {
      * [2, 3, 1, 3]
      */
     @Test
-    void DatasetUnitTest6() {
+    public void testParseNestedParens() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(s.parseNestedParens("(()()) ((())) () ((())()())").equals(Arrays.asList(2, 3, 1, 3)));
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+        String input = "(()()) ((())) () ((())())";
+        List<Integer> expected = Arrays.asList(2, 3, 1, 3);
+        List<Integer> actual = s.parseNestedParens(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -167,10 +167,13 @@ class DatasetUnitTests {
      * ["abc", "bacd", "array"]
      */
     @Test
-    void DatasetUnitTest7() {
+    public void testFilterBySubstring() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.filterBySubstring(new ArrayList<>(List.of()), "s").equals(List.of()), s.filterBySubstring(new ArrayList<>(Arrays.asList("abc", "bacd", "cde", "array")), "a").equals(Arrays.asList("abc", "bacd", "array")) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        List<String> strings = Arrays.asList("abc", "bacd", "cde", "array");
+        String substring = "a";
+        List<String> expected = Arrays.asList("abc", "bacd", "array");
+        List<String> actual = s.filterBySubstring(strings, substring);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -185,10 +188,12 @@ class DatasetUnitTests {
      * [10, 24]
      */
     @Test
-    void DatasetUnitTest8() {
+    public void testSumProduct() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.sumProduct(new ArrayList<>(List.of())).equals(Arrays.asList(0, 1)), s.sumProduct(new ArrayList<>(Arrays.asList(1, 2, 3,4))).equals(Arrays.asList(10, 24)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
+        List<Integer> expected = Arrays.asList(10, 24);
+        List<Integer> actual = s.sumProduct(numbers);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -200,10 +205,12 @@ class DatasetUnitTests {
      * [1, 2, 3, 3, 3, 4, 4]
      */
     @Test
-    void DatasetUnitTest9() {
+    public void testRollingMax() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.rollingMax(new ArrayList<>(List.of(1, 2, 3, 2, 3, 4, 2))).equals(List.of(1, 2, 3, 3, 3, 4, 4)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 2, 3, 4, 2);
+        List<Integer> expected = Arrays.asList(1, 2, 3, 3, 3, 4, 4);
+        List<Integer> actual = s.rollingMax(numbers);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -211,10 +218,20 @@ class DatasetUnitTests {
     //=================================================================================================
     /** Test if given string is a palindrome */
     @Test
-    void DatasetUnitTest10() {
+    public void testIsPalindrome() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Objects.equals(s.makePalindrome(""), ""), Objects.equals(s.makePalindrome("cat"), "catac"), Objects.equals(s.makePalindrome("cata"), "catac") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        String string = "racecar";
+        boolean expected = true;
+        boolean actual = s.isPalindrome(string);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testMakePalindrome() {
+        Solution s = new Solution();
+        String string = "racecar";
+        String expected = "racecarracecar";
+        String actual = s.makePalindrome(string);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -227,10 +244,13 @@ class DatasetUnitTests {
      * "100"
      */
     @Test
-    void DatasetUnitTest11() {
+    public void testStringXor() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Objects.equals(s.stringXor("010", "110"), "100") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        String a = "010";
+        String b = "110";
+        String expected = "100";
+        String actual = s.stringXor(a, b);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -248,10 +268,12 @@ class DatasetUnitTests {
      * Optional[ccc]
      */
     @Test
-    void DatasetUnitTest12() {
+    public void testLongest() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.longest(new ArrayList<>(List.of())).isEmpty(), Objects.equals(s.longest(new ArrayList<>(Arrays.asList("a", "b", "c"))).get(), "a"), Objects.equals(s.longest(new ArrayList<>(Arrays.asList("a", "bb", "ccc"))).get(), "ccc") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        List<String> strings = Arrays.asList("a", "b", "c");
+        Optional<String> expected = Optional.of("c");
+        Optional<String> actual = s.longest(strings);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -265,11 +287,24 @@ class DatasetUnitTests {
      * 5
      */
     @Test
-    void DatasetUnitTest13() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.greatestCommonDivisor(3, 5) == 1, s.greatestCommonDivisor(25, 15) == 5 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testGreatestCommonDivisor() {
+        Solution solution = new Solution();
+        assertEquals(1, solution.greatestCommonDivisor(3, 5));
+        assertEquals(5, solution.greatestCommonDivisor(25, 15));
+        // Test with some edge cases
+        assertEquals(0, solution.greatestCommonDivisor(0, 10));
+        assertEquals(10, solution.greatestCommonDivisor(10, 0));
+        assertEquals(1, solution.greatestCommonDivisor(1, 1));
+        assertEquals(2, solution.greatestCommonDivisor(2, 4));
+        // Test with some random inputs
+        int a = 1234;
+        int b = 5678;
+        assertEquals(1234, solution.greatestCommonDivisor(a, b));
+        a = 234;
+        b = 789;
+        assertEquals(234, solution.greatestCommonDivisor(a, b));
     }
+
 
     //=================================================================================================
     // Test 14
@@ -280,10 +315,12 @@ class DatasetUnitTests {
      * ["a", "ab", "abc"]
      */
     @Test
-    void DatasetUnitTest14() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.allPrefixes("abc").equals(Arrays.asList("a", "ab", "abc")) );
-        if (correct.contains(false)) { throw new AssertionError();}
+    public void testAllPrefixes() {
+        Solution solution = new Solution();
+        String input = "abc";
+        List<String> expected = Arrays.asList("a", "ab", "abc");
+        List<String> actual = solution.allPrefixes(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -297,10 +334,14 @@ class DatasetUnitTests {
      * "0 1 2 3 4 5"
      */
     @Test
-    void DatasetUnitTest15() {
+    public void testStringSequence() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.stringSequence(0).equals("0"), s.stringSequence(5).equals("0 1 2 3 4 5") );
-        if (correct.contains(false)) { throw new AssertionError();}
+        String expected = "0";
+        String actual = s.stringSequence(0);
+        assertEquals(expected, actual);
+        expected = "0 1 2 3 4 5";
+        actual = s.stringSequence(5);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -314,10 +355,16 @@ class DatasetUnitTests {
      * 4
      */
     @Test
-    void DatasetUnitTest16() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.countDistinctCharacters("xyzXYZ") == 3, s.countDistinctCharacters("Jerry") == 4 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testCountDistinctCharacters() {
+        Solution solution = new Solution();
+        String input = "xyzXYZ";
+        int expected = 3;
+        int actual = solution.countDistinctCharacters(input);
+        assertEquals(expected, actual);
+        input = "Jerry";
+        expected = 4;
+        actual = solution.countDistinctCharacters(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -334,10 +381,12 @@ class DatasetUnitTests {
      * [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
      */
     @Test
-    void DatasetUnitTest17() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.parseMusic("o o| .| o| o| .| .| .| .| o o").equals(Arrays.asList(4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testParseMusic() {
+        Solution solution = new Solution();
+        String input = "o o| .| o| o| .| .| .| .| o o";
+        List<Integer> expected = Arrays.asList(4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4);
+        List<Integer> actual = solution.parseMusic(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -353,11 +402,25 @@ class DatasetUnitTests {
      * 3
      */
     @Test
-    void DatasetUnitTest18() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.howManyTimes("", "a") == 0, s.howManyTimes("aaa", "a") == 3, s.howManyTimes("aaaa", "aa") == 3 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testHowManyTimes() {
+        Solution solution = new Solution();
+        String input = "";
+        String substring = "a";
+        int expected = 0;
+        int actual = solution.howManyTimes(input, substring);
+        assertEquals(expected, actual);
+        input = "aaa";
+        substring = "a";
+        expected = 3;
+        actual = solution.howManyTimes(input, substring);
+        assertEquals(expected, actual);
+        input = "aaaa";
+        substring = "aa";
+        expected = 3;
+        actual = solution.howManyTimes(input, substring);
+        assertEquals(expected, actual);
     }
+
     //=================================================================================================
     // Test 19
     //=================================================================================================
@@ -369,10 +432,12 @@ class DatasetUnitTests {
      * "one three five"
      */
     @Test
-    void DatasetUnitTest19() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.sortNumbers("three one five").equals("one three five") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testSortNumbers() {
+        Solution solution = new Solution();
+        String input = "three one five";
+        String expected = "one three five";
+        String actual = solution.sortNumbers(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -387,12 +452,12 @@ class DatasetUnitTests {
      * [2.0, 2.0]
      */
     @Test
-    void DatasetUnitTest20() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList(s.findClosestElements(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0, 2.2))).equals(Arrays.asList(2.0, 2.2)), s.findClosestElements(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0, 2.0))).equals(Arrays.asList(2.0, 2.0)));
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+    public void testFindClosestElements() {
+        Solution solution = new Solution();
+        List<Double> numbers = Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0, 2.2);
+        List<Double> expected = Arrays.asList(2.0, 2.2);
+        List<Double> actual = solution.findClosestElements(numbers);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -405,10 +470,12 @@ class DatasetUnitTests {
      * [0.0, 0.25, 0.5, 0.75, 1.0]
      */
     @Test
-    void DatasetUnitTest21() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.rescaleToUnit(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0))).equals(Arrays.asList(0.0, 0.25, 0.5, 0.75, 1.0)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testRescaleToUnit() {
+        Solution solution = new Solution();
+        List<Double> numbers = Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0);
+        List<Double> expected = Arrays.asList(0.0, 0.25, 0.5, 0.75, 1.0);
+        List<Double> actual = solution.rescaleToUnit(numbers);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -422,10 +489,16 @@ class DatasetUnitTests {
      * [1, 2, 3]
      */
     @Test
-    void DatasetUnitTest22() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.filterIntergers(new ArrayList<>(Arrays.asList('a', 3.14, 5))).equals(Arrays.asList(5)), s.filterIntergers(new ArrayList<>(Arrays.asList(1,2,3,"abc", Map.of(), List.of()))).equals(Arrays.asList(1,2,3)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testFilterIntegers() {
+        Solution solution = new Solution();
+        List<Object> input = Arrays.asList('a', 3.14, 5);
+        List<Integer> expected = Arrays.asList(5);
+        List<Integer> actual = solution.filterIntergers(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(1, 2, 3, "abc", Map.of(), List.of());
+        expected = Arrays.asList(1, 2, 3);
+        actual = solution.filterIntergers(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -439,10 +512,16 @@ class DatasetUnitTests {
      * 3
      */
     @Test
-    void DatasetUnitTest23() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.strlen("") == 0, s.strlen("abc") == 3 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testStrlen() {
+        Solution solution = new Solution();
+        String input = "";
+        int expected = 0;
+        int actual = solution.strlen(input);
+        assertEquals(expected, actual);
+        input = "abc";
+        expected = 3;
+        actual = solution.strlen(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -454,10 +533,12 @@ class DatasetUnitTests {
      * 5
      */
     @Test
-    void DatasetUnitTest24() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.largestDivisor(15) == 5 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testLargestDivisor() {
+        Solution solution = new Solution();
+        int input = 15;
+        int expected = 5;
+        int actual = solution.largestDivisor(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -475,10 +556,20 @@ class DatasetUnitTests {
      * [2, 5, 7]
      */
     @Test
-    void DatasetUnitTest25() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.factorize(8).equals(Arrays.asList(2, 2, 2)), s.factorize(25).equals(Arrays.asList(5,5)), s.factorize(70).equals(Arrays.asList(2,5,7)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testFactorize() {
+        Solution solution = new Solution();
+        int input = 8;
+        List<Integer> expected = Arrays.asList(2, 2, 2);
+        List<Integer> actual = solution.factorize(input);
+        assertEquals(expected, actual);
+        input = 25;
+        expected = Arrays.asList(5, 5);
+        actual = solution.factorize(input);
+        assertEquals(expected, actual);
+        input = 70;
+        expected = Arrays.asList(2, 5, 7);
+        actual = solution.factorize(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -491,10 +582,12 @@ class DatasetUnitTests {
      * [1, 3, 4]
      */
     @Test
-    void DatasetUnitTest26() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.removeDuplicates(new ArrayList<>(Arrays.asList(1, 2, 3, 2,4))).equals(Arrays.asList(1, 3, 4)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testRemoveDuplicates() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(1, 2, 3, 2, 4);
+        List<Integer> expected = Arrays.asList(1, 3, 4);
+        List<Integer> actual = solution.removeDuplicates(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -506,10 +599,12 @@ class DatasetUnitTests {
      * "hELLO"
      */
     @Test
-    void DatasetUnitTest27() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Objects.equals(s.flipCase(""), ""), Objects.equals(s.flipCase("Hello"), "hELLO") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testFlipCase() {
+        Solution solution = new Solution();
+        String input = "Hello";
+        String expected = "hELLO";
+        String actual = solution.flipCase(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -523,10 +618,16 @@ class DatasetUnitTests {
      * "abc"
      */
     @Test
-    void DatasetUnitTest28() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Objects.equals(s.concatenate(new ArrayList<>(List.of())), ""), Objects.equals(s.concatenate(new ArrayList<>(Arrays.asList("a", "b", "c"))),"abc") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testConcatenate() {
+        Solution solution = new Solution();
+        List<String> input = Collections.emptyList();
+        String expected = "";
+        String actual = solution.concatenate(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList("a", "b", "c");
+        expected = "abc";
+        actual = solution.concatenate(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -540,10 +641,18 @@ class DatasetUnitTests {
      * ["abc", "array"]
      */
     @Test
-    void DatasetUnitTest29() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.filterByPrefix(new ArrayList<>(List.of()), "a").equals(List.of()), s.filterByPrefix(new ArrayList<>(Arrays.asList("abc", "bcd", "cde", "array")), "a").equals(Arrays.asList("abc", "array")) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testFilterByPrefix() {
+        Solution solution = new Solution();
+        List<String> input = Collections.emptyList();
+        String prefix = "a";
+        List<String> expected = Arrays.asList();
+        List<String> actual = solution.filterByPrefix(input, prefix);
+        assertEquals(expected, actual);
+        input = Arrays.asList("abc", "bcd", "cde", "array");
+        prefix = "a";
+        expected = Arrays.asList("abc", "array");
+        actual = solution.filterByPrefix(input, prefix);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -557,10 +666,16 @@ class DatasetUnitTests {
      * [5, 3, 2, 3, 9, 123, 1]
      */
     @Test
-    void DatasetUnitTest30() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.getPositive(new ArrayList<>(Arrays.asList(-1, 2, -4, 5, 6))).equals(Arrays.asList(2, 5, 6)), s.getPositive(new ArrayList<>(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))).equals(Arrays.asList(5, 3, 2, 3, 9, 123, 1)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testGetPositive() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(-1, 2, -4, 5, 6);
+        List<Integer> expected = Arrays.asList(2, 5, 6);
+        List<Integer> actual = solution.getPositive(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10);
+        expected = Arrays.asList(5, 3, 2, 3, 9, 123, 1);
+        actual = solution.getPositive(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -579,10 +694,15 @@ class DatasetUnitTests {
      * >>> isPrime(1) false
      */
     @Test
-    void DatasetUnitTest31() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( !s.isPrime(6), s.isPrime(101), s.isPrime(11), s.isPrime(13441), s.isPrime(61), !s.isPrime(4), !s.isPrime(1) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testIsPrime() {
+        Solution solution = new Solution();
+        assertEquals(false, solution.isPrime(6));
+        assertEquals(true, solution.isPrime(101));
+        assertEquals(true, solution.isPrime(11));
+        assertEquals(true, solution.isPrime(13441));
+        assertEquals(true, solution.isPrime(61));
+        assertEquals(false, solution.isPrime(4));
+        assertEquals(false, solution.isPrime(1));
     }
 
     //=================================================================================================
@@ -595,10 +715,30 @@ class DatasetUnitTests {
      * xs[0] + xs[1] * x + xs[2] * x^2 + ... + xs[n] * x^n
      */
     @Test
-    void DatasetUnitTest32() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Math.abs(s.findZero(new ArrayList<>(Arrays.asList(1.,2.)))+0.5)<1e-4, Math.abs(s.findZero(new ArrayList<>(Arrays.asList(-6.,11.,-6.,1.)))-1)<1e-4 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testPolyAndFindZero() {
+        Solution solution = new Solution();
+
+        // Test poly method
+        // Test case 1: Polynomial with coefficients [1, 2, 3] at x=2
+        List<Double> coefficients1 = Arrays.asList(1.0, 2.0, 3.0);
+        double result1 = solution.poly(coefficients1, 2);
+        assertEquals(17.0, result1, 0.0001);
+
+        // Test case 2: Polynomial with coefficients [0, 0, 1] at x=3
+        List<Double> coefficients2 = Arrays.asList(0.0, 0.0, 1.0);
+        double result2 = solution.poly(coefficients2, 3);
+        assertEquals(9.0, result2, 0.0001);
+
+        // Test findZero method
+        // Test case 3: Polynomial with coefficients [1, -2, 1]
+        List<Double> coefficients3 = Arrays.asList(1.0, -2.0, 1.0);
+        double zero1 = solution.findZero(coefficients3);
+        assertEquals(1.0, zero1, 0.0001);
+
+        // Test case 4: Polynomial with coefficients [1, 0, -1]
+        List<Double> coefficients4 = Arrays.asList(1.0, 0.0, -1.0);
+        double zero2 = solution.findZero(coefficients4);
+        assertEquals(1.0, zero2, 0.0001);
     }
 
     //=================================================================================================
@@ -616,10 +756,16 @@ class DatasetUnitTests {
      * [2, 6, 3, 4, 8, 9, 5]
      */
     @Test
-    void DatasetUnitTest33() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.sortThird(new ArrayList<>(Arrays.asList(1,2,3))).equals(Arrays.asList(1,2,3)), s.sortThird(new ArrayList<>(Arrays.asList(5, 6, 3, 4, 8, 9, 2))).equals(Arrays.asList(2, 6, 3, 4, 8, 9, 5)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testSortThird() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(1, 2, 3);
+        List<Integer> expected = Arrays.asList(1, 2, 3);
+        List<Integer> actual = solution.sortThird(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(5, 6, 3, 4, 8, 9, 2);
+        expected = Arrays.asList(2, 6, 3, 4, 8, 9, 5);
+        actual = solution.sortThird(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -633,10 +779,12 @@ class DatasetUnitTests {
      * [0, 2, 3, 5, 9, 123]
      */
     @Test
-    void DatasetUnitTest34() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.unique(new ArrayList<>(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))).equals(Arrays.asList(0, 2, 3, 5, 9, 123)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testUnique() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123);
+        List<Integer> expected = Arrays.asList(0, 2, 3, 5, 9, 123);
+        List<Integer> actual = solution.unique(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -652,10 +800,16 @@ class DatasetUnitTests {
      * 123
      */
     @Test
-    void DatasetUnitTest35() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.maxElement(new ArrayList<>(Arrays.asList(1, 2, 3))) == 3, s.maxElement(new ArrayList<>(Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10))) == 123 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testMaxElement() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(1, 2, 3);
+        int expected = 3;
+        int actual = solution.maxElement(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10);
+        expected = 123;
+        actual = solution.maxElement(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -674,10 +828,20 @@ class DatasetUnitTests {
      * 3
      */
     @Test
-    void DatasetUnitTest36() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.fizzBuzz(50) == 0, s.fizzBuzz(78) == 2, s.fizzBuzz(79) == 3 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testFizzBuzz() {
+        Solution solution = new Solution();
+        int input = 50;
+        int expected = 0;
+        int actual = solution.fizzBuzz(input);
+        assertEquals(expected, actual);
+        input = 78;
+        expected = 2;
+        actual = solution.fizzBuzz(input);
+        assertEquals(expected, actual);
+        input = 79;
+        expected = 3;
+        actual = solution.fizzBuzz(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -695,10 +859,16 @@ class DatasetUnitTests {
      * [3, 6, 5, 4]
      */
     @Test
-    void DatasetUnitTest37() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.sortEven(new ArrayList<>(Arrays.asList(1, 2, 3))).equals(Arrays.asList(1, 2, 3)), s.sortEven(new ArrayList<>(Arrays.asList(5,6,3,4))).equals(Arrays.asList(3,6,5,4)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testSortEven() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(1, 2, 3);
+        List<Integer> expected = Arrays.asList(1, 2, 3);
+        List<Integer> actual = solution.sortEven(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(5, 6, 3, 4);
+        expected = Arrays.asList(3, 6, 5, 4);
+        actual = solution.sortEven(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -720,10 +890,28 @@ class DatasetUnitTests {
      * 89
      */
     @Test
-    void DatasetUnitTest38() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.primeFib(1) == 2, s.primeFib(2) == 3, s.primeFib(3) == 5, s.primeFib(4) == 13, s.primeFib(5) == 89 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testPrimeFib() {
+        Solution solution = new Solution();
+        int input = 1;
+        int expected = 2;
+        int actual = solution.primeFib(input);
+        assertEquals(expected, actual);
+        input = 2;
+        expected = 3;
+        actual = solution.primeFib(input);
+        assertEquals(expected, actual);
+        input = 3;
+        expected = 5;
+        actual = solution.primeFib(input);
+        assertEquals(expected, actual);
+        input = 4;
+        expected = 13;
+        actual = solution.primeFib(input);
+        assertEquals(expected, actual);
+        input = 5;
+        expected = 89;
+        actual = solution.primeFib(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -746,10 +934,18 @@ class DatasetUnitTests {
      * false
      */
     @Test
-    void DatasetUnitTest39() {
+    public void testTriplesSumToZero() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( !s.triplesSumToZero(new ArrayList<>(Arrays.asList(1, 3, 5, 0))), s.triplesSumToZero(new ArrayList<>(Arrays.asList(1, 3, -2, 1))), !s.triplesSumToZero(new ArrayList<>(Arrays.asList(1, 2, 3, 7))), s.triplesSumToZero(new ArrayList<>(Arrays.asList(2, 4, -5, 3, 9, 7))) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        List<Integer> list1 = Arrays.asList(1, 3, 5, 0);
+        assertFalse(s.triplesSumToZero(list1));
+        List<Integer> list2 = Arrays.asList(1, 3, -2, 1);
+        assertTrue(s.triplesSumToZero(list2));
+        List<Integer> list3 = Arrays.asList(1, 2, 3, 7);
+        assertFalse(s.triplesSumToZero(list3));
+        List<Integer> list4 = Arrays.asList(2, 4, -5, 3, 9, 7);
+        assertTrue(s.triplesSumToZero(list4));
+        List<Integer> list5 = Arrays.asList(1);
+        assertFalse(s.triplesSumToZero(list5));
     }
 
     //=================================================================================================
@@ -766,10 +962,23 @@ class DatasetUnitTests {
      * This function outputs the number of such collisions.
      */
     @Test
-    void DatasetUnitTest40() {
+    public void testCarRaceCollision() {
         Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.carRaceCollision(2) == 4, s.carRaceCollision(3) == 9, s.carRaceCollision(4) == 16, s.carRaceCollision(8) == 64, s.carRaceCollision(10) == 100 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+        int expected = 0;
+        int actual = s.carRaceCollision(0);
+        assertEquals(expected, actual);
+        expected = 1;
+        actual = s.carRaceCollision(1);
+        assertEquals(expected, actual);
+        expected = 4;
+        actual = s.carRaceCollision(2);
+        assertEquals(expected, actual);
+        expected = 9;
+        actual = s.carRaceCollision(3);
+        assertEquals(expected, actual);
+        expected = 16;
+        actual = s.carRaceCollision(4);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -785,10 +994,16 @@ class DatasetUnitTests {
      * [6, 4, 6, 3, 4, 4, 10, 1, 124]
      */
     @Test
-    void DatasetUnitTest41() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.incrList(new ArrayList<>(Arrays.asList(1, 2, 3))).equals(Arrays.asList(2, 3, 4)), s.incrList(new ArrayList<>(Arrays.asList(5, 2, 5, 2, 3, 3, 9, 0, 123))).equals(Arrays.asList(6, 3, 6, 3, 4, 4, 10, 1, 124)) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testIncrList() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(1, 2, 3);
+        List<Integer> expected = Arrays.asList(2, 3, 4);
+        List<Integer> actual = solution.incrList(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123);
+        expected = Arrays.asList(6, 4, 6, 3, 4, 4, 10, 1, 124);
+        actual = solution.incrList(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -811,10 +1026,28 @@ class DatasetUnitTests {
      * false
      */
     @Test
-    void DatasetUnitTest42() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( !s.pairsSumToZero(new ArrayList<>(Arrays.asList(1, 3, 5, 0))), !s.pairsSumToZero(new ArrayList<>(Arrays.asList(1, 3, -2, 1))), !s.pairsSumToZero(new ArrayList<>(Arrays.asList(1, 2, 3, 7))), s.pairsSumToZero(new ArrayList<>(Arrays.asList(2, 4, -5, 3, 5, 7))) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testPairsSumToZero() {
+        Solution solution = new Solution();
+        List<Integer> input = Arrays.asList(1, 3, 5, 0);
+        boolean expected = false;
+        boolean actual = solution.pairsSumToZero(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(1, 3, -2, 1);
+        expected = false;
+        actual = solution.pairsSumToZero(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(1, 2, 3, 7);
+        expected = false;
+        actual = solution.pairsSumToZero(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(2, 4, -5, 3, 5, 7);
+        expected = true;
+        actual = solution.pairsSumToZero(input);
+        assertEquals(expected, actual);
+        input = Arrays.asList(1);
+        expected = false;
+        actual = solution.pairsSumToZero(input);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -834,10 +1067,23 @@ class DatasetUnitTests {
      * "111"
      */
     @Test
-    void DatasetUnitTest43() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Objects.equals(s.changeBase(8, 3), "22"), Objects.equals(s.changeBase(8, 2), "1000"), Objects.equals(s.changeBase(7, 2), "111") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testChangeBase() {
+        Solution solution = new Solution();
+        int x = 8;
+        int base = 3;
+        String expected = "22";
+        String actual = solution.changeBase(x, base);
+        assertEquals(expected, actual);
+        x = 8;
+        base = 2;
+        expected = "1000";
+        actual = solution.changeBase(x, base);
+        assertEquals(expected, actual);
+        x = 7;
+        base = 2;
+        expected = "111";
+        actual = solution.changeBase(x, base);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -851,10 +1097,13 @@ class DatasetUnitTests {
      * 7.5
      */
     @Test
-    void DatasetUnitTest44() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.triangleArea(5, 3) == 7.5 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testTriangleArea() {
+        Solution solution = new Solution();
+        double a = 5;
+        double h = 3;
+        double expected = 7.5;
+        double actual = solution.triangleArea(a, h);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -880,10 +1129,20 @@ class DatasetUnitTests {
      * 14
      */
     @Test
-    void DatasetUnitTest45() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.fib4(5) == 4, s.fib4(6) == 8, s.fib4(7) == 14 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testFib4() {
+        Solution solution = new Solution();
+        int n = 5;
+        int expected = 4;
+        int actual = solution.fib4(n);
+        assertEquals(expected, actual);
+        n = 6;
+        expected = 8;
+        actual = solution.fib4(n);
+        assertEquals(expected, actual);
+        n = 7;
+        expected = 14;
+        actual = solution.fib4(n);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -899,10 +1158,16 @@ class DatasetUnitTests {
      * 15.0
      */
     @Test
-    void DatasetUnitTest46() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.median(new ArrayList<>(Arrays.asList(3, 1, 2, 4, 5))) == 3, s.median(new ArrayList<>(Arrays.asList(-10, 4, 6, 1000, 10, 20))) == 8.0 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testMedian() {
+        Solution solution = new Solution();
+        List<Integer> l = Arrays.asList(3, 1, 2, 4, 5);
+        double expected = 3;
+        double actual = solution.median(l);
+        assertEquals(expected, actual);
+        l = Arrays.asList(-10, 4, 6, 1000, 10, 20);
+        expected = 15.0;
+        actual = solution.median(l);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -922,10 +1187,24 @@ class DatasetUnitTests {
      * false
      */
     @Test
-    void DatasetUnitTest47() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.isPalindrome(""), s.isPalindrome("aba"), s.isPalindrome("aaaaa"), !s.isPalindrome("zbcd") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testIsPalindrome1() {
+        Solution solution = new Solution();
+        String text = "";
+        boolean expected = true;
+        boolean actual = solution.tisPalindrome(text);
+        assertEquals(expected, actual);
+        text = "aba";
+        expected = true;
+        actual = solution.tisPalindrome(text);
+        assertEquals(expected, actual);
+        text = "aaaaa";
+        expected = true;
+        actual = solution.tisPalindrome(text);
+        assertEquals(expected, actual);
+        text = "zbcd";
+        expected = false;
+        actual = solution.tisPalindrome(text);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -947,10 +1226,33 @@ class DatasetUnitTests {
      * 1
      */
     @Test
-    void DatasetUnitTest48() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.modp(3, 5) == 3, s.modp(1101, 101) == 2, s.modp(0, 101) == 1, s.modp(3, 11) == 8, s.modp(100, 101) == 1 );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testModp() {
+        Solution solution = new Solution();
+        int n = 3;
+        int p = 5;
+        int expected = 3;
+        int actual = solution.modp(n, p);
+        assertEquals(expected, actual);
+        n = 1101;
+        p = 101;
+        expected = 2;
+        actual = solution.modp(n, p);
+        assertEquals(expected, actual);
+        n = 0;
+        p = 101;
+        expected = 1;
+        actual = solution.modp(n, p);
+        assertEquals(expected, actual);
+        n = 3;
+        p = 11;
+        expected = 8;
+        actual = solution.modp(n, p);
+        assertEquals(expected, actual);
+        n = 100;
+        p = 101;
+        expected = 1;
+        actual = solution.modp(n, p);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -974,10 +1276,32 @@ class DatasetUnitTests {
      * "zbcd"
      */
     @Test
-    void DatasetUnitTest49() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( Objects.equals(s.removeVowels(""), ""), Objects.equals(s.removeVowels("abcdef\nghijklm"), "bcdf\nghjklm"), Objects.equals(s.removeVowels("abcdef"), "bcdf"), Objects.equals(s.removeVowels("aaaaa"), ""), Objects.equals(s.removeVowels("aaBAA"), "B"), Objects.equals(s.removeVowels("zbcd"), "zbcd") );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testRemoveVowels() {
+        Solution solution = new Solution();
+        String text = "";
+        String expected = "";
+        String actual = solution.removeVowels(text);
+        assertEquals(expected, actual);
+        text = "abcdef\nghijklm";
+        expected = "bcdf\nghjklm";
+        actual = solution.removeVowels(text);
+        assertEquals(expected, actual);
+        text = "abcdef";
+        expected = "bcdf";
+        actual = solution.removeVowels(text);
+        assertEquals(expected, actual);
+        text = "aaaaa";
+        expected = "";
+        actual = solution.removeVowels(text);
+        assertEquals(expected, actual);
+        text = "aaBAA";
+        expected = "B";
+        actual = solution.removeVowels(text);
+        assertEquals(expected, actual);
+        text = "zbcd";
+        expected = "zbcd";
+        actual = solution.removeVowels(text);
+        assertEquals(expected, actual);
     }
 
     //=================================================================================================
@@ -993,9 +1317,18 @@ class DatasetUnitTests {
      * false
      */
     @Test
-    void DatasetUnitTest50() {
-        Solution s = new Solution();
-        List<Boolean> correct = Arrays.asList( s.belowThreshold(new ArrayList<>(Arrays.asList(1, 2, 4, 10)), 100), !s.belowThreshold(new ArrayList<>(Arrays.asList(1, 20, 4, 10)), 5) );
-        if (correct.contains(false)) { throw new AssertionError(); }
+    public void testBelowThreshold() {
+        Solution solution = new Solution();
+        List<Integer> l = Arrays.asList(1, 2, 4, 10);
+        int t = 100;
+        boolean expected = true;
+        boolean actual = solution.belowThreshold(l, t);
+        assertEquals(expected, actual);
+        l = Arrays.asList(1, 20, 4, 10);
+        t = 5;
+        expected = false;
+        actual = solution.belowThreshold(l, t);
+        assertEquals(expected, actual);
     }
+
 }
