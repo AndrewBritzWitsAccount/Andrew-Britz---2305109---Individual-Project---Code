@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>AndrewBritzProjectCode</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -15,10 +16,34 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <!--
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.15.8</version>
+                <configuration>
+                    <targetClasses>
+                        <param>Solution</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>DatasetUnitTests</param>
+                    </targetTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    -->
+
+
+
+
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
+
 
 </project>
